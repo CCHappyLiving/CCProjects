@@ -21,5 +21,8 @@ public interface IUserService<T>
 	//根据sql查询出所有的List方法
 	public List findAllBySql(String sql);
 
+	//实现新用户注册判断用户名是否存在的方法
+	public boolean validateName(String registerName);
+	
 	
 }

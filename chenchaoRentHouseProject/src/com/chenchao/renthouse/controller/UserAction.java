@@ -140,4 +140,25 @@ public class UserAction extends ActionSupport
 		}
 		return INPUT;
 	}
+	
+	/*
+	 *实现新用户注册的时候的用户名是否可以使用的方法实现  
+	 */
+	public String validateName()
+	{
+		//调用service的方法实现对注册名称是否可用的方法
+		if(userService.validateName(user.getUsername()))
+		{
+			msg="false";
+			return INPUT;
+			
+		}
+		else
+		{
+			msg = "true";
+			return SUCCESS;
+		}
+	}
+	
+	
 }

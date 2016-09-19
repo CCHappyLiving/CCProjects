@@ -59,7 +59,7 @@ public class HouseUser implements java.io.Serializable {
 		this.id = id;
 	}
 
-	@Column(name = "USERNAME", length = 1)
+	@Column(name = "USERNAME", length = 10)
 	public String getUsername() {
 		return this.username;
 	}

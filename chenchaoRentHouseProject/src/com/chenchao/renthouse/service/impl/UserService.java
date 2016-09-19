@@ -77,4 +77,15 @@ public class UserService implements IUserService
 	{
 		return userDao.findAllBySql(sql);
 	}
+
+	@Override
+	public boolean validateName(String registerName)
+	{
+		List<HouseUser> user = userDao.findByProperty("HouseUser","username" , registerName);
+		if(null != user && !user.isEmpty())
+		{   //数据库中存在用户
+			return true;
+		}
+		return false;
+	}
 }
