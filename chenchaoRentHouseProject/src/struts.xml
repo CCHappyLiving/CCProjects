@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <constant name="struts.custom.i18n.resources" value="message"></constant>
+    
+   	<package name="user" namespace="/" extends="struts-default">
+   		<!-- 用户注册 -->
+   		<action name="register" class="com.chenchao.renthouse.controller.UserAction" method="register">
+   			<result name="success">/jsp/register.jsp</result>
+   			<result name="input">/jsp/test.jsp</result>
+   		</action>
+   		
+   		<!--发布租房管理信息时的存储  -->
+   		<action name="addHouse" class="com.chenchao.renthouse.controller.HouseAction" method="addHouse">
+   		
+   		
+   		</action>
+   		
+   		
+   	</package>
+   	
+   	<!-- json -->
+   	<package name="user_login" namespace="/" extends="json-default">
+   	  	<!--检验登陆功能  -->
+   		<action name="login" class="com.chenchao.renthouse.controller.UserAction" method="doLogin">
+   			<result name="success" type="json">
+    		
+    		</result>
+    		<result name="input" type="json">
+    		
+    		</result>
+   		</action>
+   		
+   		<!-- 查询数据库填充下拉框 -->
+   		<action name="search" class="com.chenchao.renthouse.controller.UserAction" method="findAll">
+ 			<result name="success" type="json">
+    		
+    		</result>
+   		</action>
+   		
+   		<!--查询注册新用户时候用户名是否已经存在  -->
+   		<action name="validateName" class="com.chenchao.renthouse.controller.UserAction" method="validateName">
+   			<result name="success" type="json">
+    		
+    		</result>
+    		
+    		<result name="input" type="json">
+    		
+    		</result>	
+   		</action>
+   		
+ 	</package>
+</struts>
