@@ -1,11 +1,13 @@
 package com.chenchao.renthouse.dao.impl;
 
+import org.springframework.stereotype.Repository;
 import com.chenchao.renthouse.base.dao.impl.IBaseDaoImpl;
-import com.chenchao.renthouse.dao.IUserDao;
+import com.chenchao.renthouse.dao.IHouseDao;
 import com.chenchao.renthouse.entity.House;
 import com.chenchao.renthouse.entity.HousePicture;
 
-public class HouseDaoImpl extends IBaseDaoImpl implements IUserDao
+@Repository
+public class HouseDaoImpl extends IBaseDaoImpl implements IHouseDao
 {
 	//复写父类方法,实现存储用户发布租房信息的功能
 	@Override

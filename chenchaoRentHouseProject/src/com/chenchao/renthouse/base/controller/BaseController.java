@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -13,6 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author  <a href="mailto: xxx@gaotai.cn">chenchao</a>
  * @version 1.0
  */
+@Controller
 public class BaseController extends ActionSupport implements SessionAware,RequestAware
 {
 	protected Map<String ,Object> request;

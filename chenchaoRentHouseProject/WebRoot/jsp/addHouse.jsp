@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body id="body" style="text-align: center;">
   	
-	<form action="doAddHouse.action" onsubmit="return validate();" enctype="multipart/form-data" >
+	<form action="addHouse.action" onsubmit="return validate();" enctype="multipart/form-data" >
 	   	
 	   	标题:<input type="text" name="house.title"/><br/>	
 	   

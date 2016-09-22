@@ -52,7 +52,6 @@ public class IBaseDaoImpl<T> extends HibernateDaoSupport implements IBaseDao<T>
 	public void save(T t)
 	{
 		// TODO Auto-generated method stub
-		
 	}
 
 }

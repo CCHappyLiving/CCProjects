@@ -16,10 +16,8 @@
    		
    		<!--发布租房管理信息时的存储  -->
    		<action name="addHouse" class="com.chenchao.renthouse.controller.HouseAction" method="addHouse">
-   		
-   		
+   			<result name="input">/jsp/test.jsp</result>
    		</action>
-   		
    		
    	</package>
    	
